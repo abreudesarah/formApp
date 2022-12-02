@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      START 🛒
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://about.fb.com/br/wp-content/uploads/sites/3/2018/10/privacy-001-1.jpeg?resize=890%2C501" />
+    <ion-card-header>
+      <ion-card-title style="font-family: fantasy" class="ion-text-center">Começar!</ion-card-title>
+      <ion-card-subtitle class="ion-text-center">Ir para o FormsAPP</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <h5 class="ion-text-center">Se você já possui uma conta ou quer criar uma, comece por aqui!</h5>
+
+
+
+
+      <ion-button expand="block" color="dark" routerLink="/login">Fazer Login</ion-button>
+      <ion-button expand="full"color="dark" routerLink="/registro">Fazer Registro</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-item-sliding *ngFor="let user of listaUsuarios">
+
+    <ion-item>
+      <ion-label>
+        <div>
+          <h1>{{user.nome}}</h1>
+          <span style="float: right;">{{user.cpf}}</span>
+          <a href="mailto:{{user.email}}"> {{user.email}} </a>
+        </div>
+      </ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option color="danger" (click)="excluirCadastro(user.email)">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-item-option>
+
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-card color="dark">
+  <ion-card-header>
+    <ion-card-subtitle>formulário</ion-card-subtitle>
+    <ion-card-title>FORMSAPP</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    Entender o processo de elaboração de formulários do Google é importante
+não só para padronização dos treinamentos oferecidos pela CEU em parceria
+com as bibliotecas que compõem o Sistemas de Biblioteca da UFC, mas
+também para agilizar o processo de acompanhamento, controle de inscrições
+e emissão de certificados.
+  </ion-card-content>
+</ion-card>
+</ion-content>

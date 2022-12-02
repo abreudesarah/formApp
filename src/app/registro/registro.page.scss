@@ -1,0 +1,28 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  }
+
+
+
+
+ion-card-title{
+  text-align: center;
+}
+
+
+ion-icon{
+
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.msg-erro{
+  color:firebrick;
+  font-size: 10px;
+  clear: both;
+  position: relative;
+}
